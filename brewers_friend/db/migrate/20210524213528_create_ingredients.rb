@@ -6,7 +6,7 @@ class CreateIngredients < ActiveRecord::Migration[6.1]
       t.string :variety
       t.decimal :amount
       t.string :unit
-      t.belongs_to :beer, null: false, foreign_key: true
+      t.belongs_to :beer, index: true, foreign_key: true
     end
   end
 end
