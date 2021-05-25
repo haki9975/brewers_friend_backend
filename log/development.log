@@ -2387,3 +2387,248 @@ Processing by BeersController#show as HTML
 Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1988)
 
 
+Started GET "/beers" for 127.0.0.1 at 2021-05-25 12:07:15 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BeersController#index as HTML
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 90ms (Views: 70.2ms | ActiveRecord: 6.7ms | Allocations: 30771)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:09:45 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (0.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 2.4ms | Allocations: 14337)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:09:46 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (0.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (5.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 63ms (Views: 55.3ms | ActiveRecord: 7.3ms | Allocations: 14336)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:09:47 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 2.0ms | Allocations: 14336)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:09:47 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (1.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (1.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (11.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 144ms (Views: 128.6ms | ActiveRecord: 15.2ms | Allocations: 14336)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:10:51 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 3.1ms | Allocations: 14317)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:10:52 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (1.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 3.4ms | Allocations: 14316)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:10:52 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (1.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (2.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 48.6ms | ActiveRecord: 6.5ms | Allocations: 14316)
+
+
+Started GET "/beers" for ::1 at 2021-05-25 12:11:55 -0400
+Processing by BeersController#index as */*
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 36]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 37]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 38]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 39]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 40]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 41]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 42]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 43]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 44]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ?[0m  [["beer_id", 45]]
+  ↳ app/controllers/beers_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.5ms | Allocations: 14316)
+
+
