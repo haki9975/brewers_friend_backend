@@ -371,3 +371,728 @@ FOREIGN KEY ("beer_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.6ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (56.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (46.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.7ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (55.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.7ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (72.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (48.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (60.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chinook"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (47.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (46.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make Earth Great Again"], ["description", "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry)."], ["abv", 7.5], ["ibu", 35.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 60 min."], ["fermentation_instruct", "Ferment at: 23 C."], ["food_pairing", "Raspberry Souffle, Oysters With a Chili And Dill Sauce"], ["tips", "You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison."]]
+  [1m[36mTRANSACTION (36.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Make Earth Great Again"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (63.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (49.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manarina Bavaria"], ["category", "Hops"], ["amount", 6.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (35.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cloudberries"], ["category", "Hops"], ["amount", 100.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (41.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Old World Russian Imperial Stout"], ["description", "This Old World Stout perfectly recreates the export stouts of years gone by; brewed to imperial strength to avoid freezing during its journey across the Baltic Sea to snowy Moscow. Full bodied with huge chocolate, coffee and roast flavours, this imperial stout employs a variety of hops to add enough bitterness and hop complexity to balance the huge malt sweetness and rich mocha and molasses flavours."], ["abv", 9.5], ["ibu", 80.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 64 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Seared steak with a peppercorn sauce, Strong blue cheese and oatcakes, Chocolate cheesecake"], ["tips", "Add the chocolate malt after the mash is complete, at the start of sparging. This will extract flavour and colour, but will prevent the extraction of harsh tannins into the wort."]]
+  [1m[36mTRANSACTION (68.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Old World Russian Imperial Stout"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (54.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (45.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chocolate"], ["category", "Malt"], ["amount", 6.0], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (43.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (65.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hercules"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (55.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (45.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (54.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enigma Hopped IPA."], ["description", "A cheeky play with a new hop on the pilot kit. Expect notes of redcurrant, melon and citrus. An intriguing possibility for the future."], ["abv", 5.0], ["ibu", 50.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 for 30 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Enigma has a very high alpha acid so be careful not to over do the bittering hops."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (55.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Enigma Hopped IPA"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (57.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (43.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (72.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (353.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chinook"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (91.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (62.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make Earth Great Again"], ["description", "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry)."], ["abv", 7.5], ["ibu", 35.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 60 min."], ["fermentation_instruct", "Ferment at: 23 C."], ["food_pairing", "Raspberry Souffle, Oysters With a Chili And Dill Sauce"], ["tips", "You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison."]]
+  [1m[36mTRANSACTION (69.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Make Earth Great Again"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (69.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (62.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manarina Bavaria"], ["category", "Hops"], ["amount", 6.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (84.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cloudberries"], ["category", "Hops"], ["amount", 100.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (60.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (62.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Old World Russian Imperial Stout"], ["description", "This Old World Stout perfectly recreates the export stouts of years gone by; brewed to imperial strength to avoid freezing during its journey across the Baltic Sea to snowy Moscow. Full bodied with huge chocolate, coffee and roast flavours, this imperial stout employs a variety of hops to add enough bitterness and hop complexity to balance the huge malt sweetness and rich mocha and molasses flavours."], ["abv", 9.5], ["ibu", 80.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 64 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Seared steak with a peppercorn sauce, Strong blue cheese and oatcakes, Chocolate cheesecake"], ["tips", "Add the chocolate malt after the mash is complete, at the start of sparging. This will extract flavour and colour, but will prevent the extraction of harsh tannins into the wort."]]
+  [1m[36mTRANSACTION (73.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Old World Russian Imperial Stout"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (66.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (60.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chocolate"], ["category", "Malt"], ["amount", 6.0], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (65.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (95.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (83.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hercules"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (61.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (63.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (84.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enigma Hopped IPA."], ["description", "A cheeky play with a new hop on the pilot kit. Expect notes of redcurrant, melon and citrus. An intriguing possibility for the future."], ["abv", 5.0], ["ibu", 50.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 for 30 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Enigma has a very high alpha acid so be careful not to over do the bittering hops."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (68.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Enigma Hopped IPA"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.6ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (67.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.5ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (50.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (45.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (224.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chinook"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (65.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (55.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make Earth Great Again"], ["description", "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry)."], ["abv", 7.5], ["ibu", 35.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 60 min."], ["fermentation_instruct", "Ferment at: 23 C."], ["food_pairing", "Raspberry Souffle, Oysters With a Chili And Dill Sauce"], ["tips", "You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison."]]
+  [1m[36mTRANSACTION (36.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Make Earth Great Again"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (45.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (49.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (1.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manarina Bavaria"], ["category", "Hops"], ["amount", 6.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (83.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cloudberries"], ["category", "Hops"], ["amount", 100.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (71.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (79.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Old World Russian Imperial Stout"], ["description", "This Old World Stout perfectly recreates the export stouts of years gone by; brewed to imperial strength to avoid freezing during its journey across the Baltic Sea to snowy Moscow. Full bodied with huge chocolate, coffee and roast flavours, this imperial stout employs a variety of hops to add enough bitterness and hop complexity to balance the huge malt sweetness and rich mocha and molasses flavours."], ["abv", 9.5], ["ibu", 80.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 64 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Seared steak with a peppercorn sauce, Strong blue cheese and oatcakes, Chocolate cheesecake"], ["tips", "Add the chocolate malt after the mash is complete, at the start of sparging. This will extract flavour and colour, but will prevent the extraction of harsh tannins into the wort."]]
+  [1m[36mTRANSACTION (57.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Old World Russian Imperial Stout"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (95.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (188.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chocolate"], ["category", "Malt"], ["amount", 6.0], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (194.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (41.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (70.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hercules"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (249.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (37.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (37.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enigma Hopped IPA."], ["description", "A cheeky play with a new hop on the pilot kit. Expect notes of redcurrant, melon and citrus. An intriguing possibility for the future."], ["abv", 5.0], ["ibu", 50.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 for 30 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Enigma has a very high alpha acid so be careful not to over do the bittering hops."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (43.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Enigma Hopped IPA"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateIngredients (20210524213528)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "ingredients"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210524213528"]]
+  [1m[36mTRANSACTION (126.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateIngredients (20210524213528)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "category" varchar, "amount" decimal, "unit" varchar, "beer_id" integer, CONSTRAINT "fk_rails_2fa129ff66"
+FOREIGN KEY ("beer_id")
+  REFERENCES "beers" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_ingredients_on_beer_id" ON "ingredients" ("beer_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210524213528"]]
+  [1m[36mTRANSACTION (69.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (38.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (32.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (40.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (52.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (64.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chinook"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (53.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (62.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make Earth Great Again"], ["description", "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry)."], ["abv", 7.5], ["ibu", 35.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 60 min."], ["fermentation_instruct", "Ferment at: 23 C."], ["food_pairing", "Raspberry Souffle, Oysters With a Chili And Dill Sauce"], ["tips", "You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison."]]
+  [1m[36mTRANSACTION (38.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Make Earth Great Again"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (42.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (44.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manarina Bavaria"], ["category", "Hops"], ["amount", 6.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (68.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cloudberries"], ["category", "Hops"], ["amount", 100.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (54.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (35.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Old World Russian Imperial Stout"], ["description", "This Old World Stout perfectly recreates the export stouts of years gone by; brewed to imperial strength to avoid freezing during its journey across the Baltic Sea to snowy Moscow. Full bodied with huge chocolate, coffee and roast flavours, this imperial stout employs a variety of hops to add enough bitterness and hop complexity to balance the huge malt sweetness and rich mocha and molasses flavours."], ["abv", 9.5], ["ibu", 80.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 64 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Seared steak with a peppercorn sauce, Strong blue cheese and oatcakes, Chocolate cheesecake"], ["tips", "Add the chocolate malt after the mash is complete, at the start of sparging. This will extract flavour and colour, but will prevent the extraction of harsh tannins into the wort."]]
+  [1m[36mTRANSACTION (63.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Old World Russian Imperial Stout"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (55.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (52.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chocolate"], ["category", "Malt"], ["amount", 6.0], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (41.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (44.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (61.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hercules"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (49.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (46.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (44.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enigma Hopped IPA."], ["description", "A cheeky play with a new hop on the pilot kit. Expect notes of redcurrant, melon and citrus. An intriguing possibility for the future."], ["abv", 5.0], ["ibu", 50.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 for 30 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Enigma has a very high alpha acid so be careful not to over do the bittering hops."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (44.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Enigma Hopped IPA"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (93.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (191.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (218.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (146.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (231.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chinook"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (82.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (84.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make Earth Great Again"], ["description", "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry)."], ["abv", 7.5], ["ibu", 35.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 60 min."], ["fermentation_instruct", "Ferment at: 23 C."], ["food_pairing", "Raspberry Souffle, Oysters With a Chili And Dill Sauce"], ["tips", "You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison."]]
+  [1m[36mTRANSACTION (160.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Make Earth Great Again"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (427.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (593.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manarina Bavaria"], ["category", "Hops"], ["amount", 6.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (514.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cloudberries"], ["category", "Hops"], ["amount", 100.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (489.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (505.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.8ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Old World Russian Imperial Stout"], ["description", "This Old World Stout perfectly recreates the export stouts of years gone by; brewed to imperial strength to avoid freezing during its journey across the Baltic Sea to snowy Moscow. Full bodied with huge chocolate, coffee and roast flavours, this imperial stout employs a variety of hops to add enough bitterness and hop complexity to balance the huge malt sweetness and rich mocha and molasses flavours."], ["abv", 9.5], ["ibu", 80.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 64 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Seared steak with a peppercorn sauce, Strong blue cheese and oatcakes, Chocolate cheesecake"], ["tips", "Add the chocolate malt after the mash is complete, at the start of sparging. This will extract flavour and colour, but will prevent the extraction of harsh tannins into the wort."]]
+  [1m[36mTRANSACTION (526.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Old World Russian Imperial Stout"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (257.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (1.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (34.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chocolate"], ["category", "Malt"], ["amount", 6.0], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (42.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (36.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (59.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hercules"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (35.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (35.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (36.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enigma Hopped IPA"], ["description", "A cheeky play with a new hop on the pilot kit. Expect notes of redcurrant, melon and citrus. An intriguing possibility for the future."], ["abv", 5.0], ["ibu", 50.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 for 30 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Enigma has a very high alpha acid so be careful not to over do the bittering hops."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (35.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Enigma Hopped IPA"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Propino Pale"], ["category", "Malt"], ["amount", 5.6], ["unit", "Kilograms"], ["beer_id", 21]]
+  [1m[36mTRANSACTION (35.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (34.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (38.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (107.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (53.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (39.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chinook"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (43.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (44.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make Earth Great Again"], ["description", "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry)."], ["abv", 7.5], ["ibu", 35.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 60 min."], ["fermentation_instruct", "Ferment at: 23 C."], ["food_pairing", "Raspberry Souffle, Oysters With a Chili And Dill Sauce"], ["tips", "You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison."]]
+  [1m[36mTRANSACTION (33.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Make Earth Great Again"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (68.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (36.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manarina Bavaria"], ["category", "Hops"], ["amount", 6.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (46.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cloudberries"], ["category", "Hops"], ["amount", 100.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (37.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (66.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Old World Russian Imperial Stout"], ["description", "This Old World Stout perfectly recreates the export stouts of years gone by; brewed to imperial strength to avoid freezing during its journey across the Baltic Sea to snowy Moscow. Full bodied with huge chocolate, coffee and roast flavours, this imperial stout employs a variety of hops to add enough bitterness and hop complexity to balance the huge malt sweetness and rich mocha and molasses flavours."], ["abv", 9.5], ["ibu", 80.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 64 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Seared steak with a peppercorn sauce, Strong blue cheese and oatcakes, Chocolate cheesecake"], ["tips", "Add the chocolate malt after the mash is complete, at the start of sparging. This will extract flavour and colour, but will prevent the extraction of harsh tannins into the wort."]]
+  [1m[36mTRANSACTION (71.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Old World Russian Imperial Stout"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (52.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (43.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chocolate"], ["category", "Malt"], ["amount", 6.0], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (65.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (52.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (61.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hercules"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (93.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (83.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (54.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enigma Hopped IPA"], ["description", "A cheeky play with a new hop on the pilot kit. Expect notes of redcurrant, melon and citrus. An intriguing possibility for the future."], ["abv", 5.0], ["ibu", 50.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 for 30 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Enigma has a very high alpha acid so be careful not to over do the bittering hops."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (124.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Enigma Hopped IPA"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Propino Pale"], ["category", "Malt"], ["amount", 5.6], ["unit", "Kilograms"], ["beer_id", 21]]
+  [1m[36mTRANSACTION (126.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Black Dog"], ["description", "5.5% dark wheat stout with Columbus, Simcoe and Chinook and of course plenty of dry hopping action."], ["abv", 5.5], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C"], ["food_pairing", "Spicy chicken and chilli verde sauce enchiladas, Smoked chorizo and strong cheese board"], ["tips", "By soaking some oak chips in bourbon, then steeping in the beer, you not only get an authentic bourbon taste - the beer will also gain ABV! Add salt to taste but beware - too much will totally ruin the balance of the beer."]]
+  [1m[36mTRANSACTION (32.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Black Dog"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (33.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.7ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (47.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (55.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (64.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chinook"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (65.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 1]]
+  [1m[36mTRANSACTION (47.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make Earth Great Again"], ["description", "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry)."], ["abv", 7.5], ["ibu", 35.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 60 min."], ["fermentation_instruct", "Ferment at: 23 C."], ["food_pairing", "Raspberry Souffle, Oysters With a Chili And Dill Sauce"], ["tips", "You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison."]]
+  [1m[36mTRANSACTION (43.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Make Earth Great Again"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (56.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (65.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manarina Bavaria"], ["category", "Hops"], ["amount", 6.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (46.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cloudberries"], ["category", "Hops"], ["amount", 100.0], ["unit", "Grams"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (33.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 3]]
+  [1m[36mTRANSACTION (34.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Old World Russian Imperial Stout"], ["description", "This Old World Stout perfectly recreates the export stouts of years gone by; brewed to imperial strength to avoid freezing during its journey across the Baltic Sea to snowy Moscow. Full bodied with huge chocolate, coffee and roast flavours, this imperial stout employs a variety of hops to add enough bitterness and hop complexity to balance the huge malt sweetness and rich mocha and molasses flavours."], ["abv", 9.5], ["ibu", 80.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 64 C for 90 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Seared steak with a peppercorn sauce, Strong blue cheese and oatcakes, Chocolate cheesecake"], ["tips", "Add the chocolate malt after the mash is complete, at the start of sparging. This will extract flavour and colour, but will prevent the extraction of harsh tannins into the wort."]]
+  [1m[36mTRANSACTION (33.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Old World Russian Imperial Stout"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (52.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (51.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chocolate"], ["category", "Malt"], ["amount", 6.0], ["unit", "Kilograms"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (38.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (43.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (41.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hercules"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (44.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (36.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 4]]
+  [1m[36mTRANSACTION (100.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enigma Hopped IPA"], ["description", "A cheeky play with a new hop on the pilot kit. Expect notes of redcurrant, melon and citrus. An intriguing possibility for the future."], ["abv", 5.0], ["ibu", 50.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 for 30 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", "Enigma has a very high alpha acid so be careful not to over do the bittering hops."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (49.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Enigma Hopped IPA"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Propino Pale"], ["category", "Malt"], ["amount", 5.6], ["unit", "Kilograms"], ["beer_id", 21]]
+  [1m[36mTRANSACTION (121.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Enigma"], ["category", "Hops"], ["amount", 47.5], ["unit", "Grams"], ["beer_id", 21]]
+  [1m[36mTRANSACTION (41.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 21]]
+  [1m[36mTRANSACTION (62.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vagabond Pilsner"], ["description", "Take the thirst-quenching crispness of a German Pilsner and combine it with lemon and honey to produce a rewarding modern twist on a beer classic."], ["abv", 4.5], ["ibu", 55.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 75 min."], ["fermentation_instruct", "Ferment at: 9 C."], ["food_pairing", "Jamaican jerk chicken, Hot dog with grilled onions and spicy ketchup, Shortbread and raspberry jam thumbprint cookie."], ["tips", "The addition of the acidulated malt tweaks the pH down to aid the yeast fermentation, and helps to creates the crisp lager bite. Be careful not to use more than 10% in any grist, it will turn your mash into jelly!"]]
+  [1m[36mTRANSACTION (34.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Vagabond Pilsner"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pale"], ["category", "Malt"], ["amount", 3.38], ["unit", "Kilograms"], ["beer_id", 30]]
+  [1m[36mTRANSACTION (47.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 30]]
+  [1m[36mTRANSACTION (45.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Centennial"], ["category", "Hops"], ["amount", 7.5], ["unit", "Grams"], ["beer_id", 30]]
+  [1m[36mTRANSACTION (41.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 30]]
+  [1m[36mTRANSACTION (41.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 30]]
+  [1m[36mTRANSACTION (52.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ship Wreck"], ["description", "This mezcal-inspired brew is the shipwrecked remains of a collaboration brewed with former craft brewers Ballast Point. Brewed to encapsulate the flavours of mezcal, this beer smoulders with peaty and light woody notes, as well as intense fruity character."], ["abv", 13.8], ["ibu", 60.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 75 min."], ["fermentation_instruct", "Ferment at: 21 C."], ["food_pairing", "Shrimp aguachile, Mezcal marinated sirloin steak, Basil panna cotta with strawberries"], ["tips", "Nail your colours to the mother fucking mast – independence or death."]]
+  [1m[36mTRANSACTION (168.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Ship Wreck"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 31]]
+  [1m[36mTRANSACTION (299.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wheat"], ["category", "Malt"], ["amount", 36.0], ["unit", "Kilograms"], ["beer_id", 31]]
+  [1m[36mTRANSACTION (220.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Smoked Malt"], ["category", "Malt"], ["amount", 53.0], ["unit", "Kilograms"], ["beer_id", 31]]
+  [1m[36mTRANSACTION (203.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Magnum"], ["category", "Hops"], ["amount", 36.0], ["unit", "Grams"], ["beer_id", 31]]
+  [1m[36mTRANSACTION (125.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Citra"], ["category", "Hops"], ["amount", 225.0], ["unit", "Grams"], ["beer_id", 31]]
+  [1m[36mTRANSACTION (126.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amarillo"], ["category", "Hops"], ["amount", 6.5], ["unit", "Grams"], ["beer_id", 31]]
+  [1m[36mTRANSACTION (132.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 31]]
+  [1m[36mTRANSACTION (206.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Small Batch: 90 Shilling"], ["description", "A malt-forward Scotch ale with a complex but mellow mix of toast crust, caramel, hints of cocoa, and a light hop spiciness."], ["abv", 5.3], ["ibu", 25.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 54 C for 75 min."], ["fermentation_instruct", "Ferment at: 19 C."], ["food_pairing", " Game Terrine, Barbeque-griddled Poussin, Clootie Dumpling"], ["tips", "Pre-mix your malts to keep the conversion of starches to sugars even across the mash and give you a more uniform grain bed for lautering and sparging. This is a lot less labour intensive than manually stirring your speciality malts into your mash tun."]]
+  [1m[36mTRANSACTION (34.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Small Batch: 90 Shilling"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Propino Pale"], ["category", "Malt"], ["amount", 5.6], ["unit", "Kilograms"], ["beer_id", 32]]
+  [1m[36mTRANSACTION (131.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 32]]
+  [1m[36mTRANSACTION (204.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cascade"], ["category", "Hops"], ["amount", 12.0], ["unit", "Grams"], ["beer_id", 32]]
+  [1m[36mTRANSACTION (49.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 32]]
+  [1m[36mTRANSACTION (43.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 32]]
+  [1m[36mTRANSACTION (146.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Prototype Helles"], ["description", "Our spin on one-of the most popular beer styles ever conceived. A celebration of light, bready malt, with toasty hints and soft bitterness."], ["abv", 4.9], ["ibu", 18.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 65 C for 75 min."], ["fermentation_instruct", "Ferment at: 12 C."], ["food_pairing", "Salt beef bagel with mustard & pickles, Pork belly ramen, Beetroot and goats cheese salad"], ["tips", "Lagering is key to traditional German styles. A Helles lives or dies on its light, bready & toasty malt flavours – give them months to develop (at cold temperatures) for an outstanding Helles."]]
+  [1m[36mTRANSACTION (277.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Prototype Helles"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (1.0ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pilsner"], ["category", "Malt"], ["amount", 3.0], ["unit", "Kilograms"], ["beer_id", 33]]
+  [1m[36mTRANSACTION (317.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Perle"], ["category", "Hops"], ["amount", 20.0], ["unit", "Grams"], ["beer_id", 33]]
+  [1m[36mTRANSACTION (64.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 33]]
+  [1m[36mTRANSACTION (52.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (0.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Opaque Jake Vermont IPA"], ["description", "Our first single-hop Vermont IPA; all the flavour in this beer comes from a combination of Citra's naturally complex flavour profile, the yeast-produced esters, and the biotransformation of the hop oils by its contact with the yeast."], ["abv", 7.2], ["ibu", 20.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 66 C for 20 min."], ["fermentation_instruct", "Ferment at: 21 C."], ["food_pairing", "Steak, chicken, Lobster salad"], ["tips", "Pectin powder can easily be sourced and is an easy alternative for a homebrewer to produce murky beer if you don’t have access to a low flocculating yeast."]]
+  [1m[36mTRANSACTION (35.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.1ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Opaque Jake Vermont IPA"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pale"], ["category", "Malt"], ["amount", 3.38], ["unit", "Kilograms"], ["beer_id", 34]]
+  [1m[36mTRANSACTION (43.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Flaked Oats"], ["category", "Malt"], ["amount", 1.0], ["unit", "Kilograms"], ["beer_id", 34]]
+  [1m[36mTRANSACTION (45.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wheat"], ["category", "Malt"], ["amount", 36.0], ["unit", "Kilograms"], ["beer_id", 34]]
+  [1m[36mTRANSACTION (48.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Citra"], ["category", "Hops"], ["amount", 225.0], ["unit", "Grams"], ["beer_id", 34]]
+  [1m[36mTRANSACTION (35.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 34]]
+  [1m[36mTRANSACTION (35.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeer Create (1.0ms)[0m  [1m[32mINSERT INTO "beers" ("name", "description", "abv", "ibu", "volume", "boil_volume", "mash_instruct", "fermentation_instruct", "food_pairing", "tips") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Libertine Porter"], ["description", "An avalanche of cross-continental hop varieties give this porter a complex spicy, resinous and citrusy aroma, with a huge malt bill providing a complex roasty counterpoint. Digging deeper into the flavour draws out cinder toffee, bitter chocolate and hints of woodsmoke."], ["abv", 6.1], ["ibu", 45.0], ["volume", 20.0], ["boil_volume", 25], ["mash_instruct", "Mash Temp: 68 C for 35 min."], ["fermentation_instruct", "Ferment at: 18 C."], ["food_pairing", "Blue cheese hamburger, glazed shortribs, chocolate cake"], ["tips", "Mash in at a higher temperature to leave more unfermentable sugars in the wort. This gives the beer a sweeter porter profile."]]
+  [1m[36mTRANSACTION (43.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT ?[0m  [["name", "Libertine Porter"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.7ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Extra Pale"], ["category", "Malt"], ["amount", 7.3], ["unit", "Kilograms"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (60.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Premium English Carmalt"], ["category", "Malt"], ["amount", 0.6], ["unit", "Kilograms"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (63.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Roasted Barley"], ["category", "Malt"], ["amount", 2.0], ["unit", "Kilograms"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (47.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wheat"], ["category", "Malt"], ["amount", 36.0], ["unit", "Kilograms"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (34.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Flaked Oats"], ["category", "Malt"], ["amount", 1.0], ["unit", "Kilograms"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (36.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Smoked Malt"], ["category", "Malt"], ["amount", 53.0], ["unit", "Kilograms"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (35.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Columbus"], ["category", "Hops"], ["amount", 34.0], ["unit", "Grams"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (36.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galena"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (68.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Willamette"], ["category", "Hops"], ["amount", 75.0], ["unit", "Grams"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (106.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simcoe"], ["category", "Hops"], ["amount", 12.5], ["unit", "Grams"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (66.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category", "amount", "unit", "beer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wyeast 1056 Pale"], ["category", "Yeast"], ["amount", 1.0], ["unit", "Package"], ["beer_id", 35]]
+  [1m[36mTRANSACTION (63.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" ORDER BY "beers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ? /* loading for inspect */ LIMIT ?[0m  [["beer_id", 1], ["LIMIT", 11]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."beer_id" = ? AND (Hops) /* loading for inspect */ LIMIT ?[0m  [["beer_id", 1], ["LIMIT", 11]]
