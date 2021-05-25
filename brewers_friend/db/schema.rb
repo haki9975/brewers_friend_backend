@@ -10,6 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_05_24_213528) do
 
+  create_table "beers", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.decimal "abv"
+    t.decimal "ibu"
+    t.decimal "volume"
+    t.integer "boil_volume"
+    t.string "mash_instruct"
+    t.string "fermentation_instruct"
+    t.text "food_pairing"
+    t.text "tips"
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.decimal "amount"
+    t.string "unit"
+    t.integer "beer_id"
+    t.index ["beer_id"], name: "index_ingredients_on_beer_id"
+  end
+
+  add_foreign_key "ingredients", "beers"
 end
