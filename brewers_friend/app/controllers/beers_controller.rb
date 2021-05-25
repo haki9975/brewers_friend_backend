@@ -5,12 +5,20 @@ class BeersController < ApplicationController
   def index
     @beers = Beer.all
 
-    render json: @beers
+    render json: @beers, include: { 
+      ingredients: {
+        except:  [:beer_id] 
+        } 
+      }
   end
 
   # GET /beers/1
   def show
-    render json: @beer
+    render json: @beer, include: { 
+      ingredients: {
+        except:  [:beer_id] 
+        } 
+      }
   end
 
   # POST /beers
