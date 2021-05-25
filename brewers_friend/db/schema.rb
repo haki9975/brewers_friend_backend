@@ -10,18 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_24_205307) do
-
-  create_table "beers", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.decimal "abv"
-    t.decimal "ibu"
-    t.decimal "volume"
-    t.text "food_pairing"
-    t.text "tips"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
