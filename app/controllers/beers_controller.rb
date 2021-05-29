@@ -7,7 +7,7 @@ class BeersController < ApplicationController
 
     render json: @beers, include: { 
       ingredients: {
-        except:  [:beer_id] 
+        except: [:beer_id] 
         } 
       }
   end
@@ -16,7 +16,7 @@ class BeersController < ApplicationController
   def show
     render json: @beer, include: { 
       ingredients: {
-        except:  [:beer_id] 
+        except: [:beer_id] 
         } 
       }
   end
@@ -24,7 +24,6 @@ class BeersController < ApplicationController
   # POST /beers
   def create
     @beer = Beer.new(beer_params)
-
     if @beer.save
       render json: @beer, status: :created, location: @beer
     else
@@ -54,6 +53,6 @@ class BeersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def beer_params
-      params.require(:beer).permit(:name, :description, :abv, :ibu, :volume, :food_pairing, :tips)
+      params.require(:beer).permit(:name, :description, :boil_volume, :mash_instruct, :fermentation_instruct, :abv, :ibu, :volume, :food_pairing, :tips, ingredients_attributes:[:name, :category, :amount, :unit])
     end
 end
