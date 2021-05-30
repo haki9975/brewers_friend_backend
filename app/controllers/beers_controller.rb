@@ -25,7 +25,10 @@ class BeersController < ApplicationController
   def create
     @beer = Beer.new(beer_params)
     if @beer.save
-      render json: @beer, status: :created, location: @beer
+      render json: {
+        status:201,
+        beer: @beer
+    }, status: :created, location: beers_path(@beer)
     else
       render json: @beer.errors, status: :unprocessable_entity
     end
@@ -42,7 +45,11 @@ class BeersController < ApplicationController
 
   # DELETE /beers/1
   def destroy
-    @beer.destroy
+   if @beer.destroy
+      render json: {message: "Successfully deleted", beer: @beer }
+   else
+     render json: {message: "Failed to delete"}
+   end
   end
 
   private
