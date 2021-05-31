@@ -5,29 +5,19 @@ class BeersController < ApplicationController
   def index
     @beers = Beer.all
 
-    render json: @beers, include: { 
-      ingredients: {
-        except: [:beer_id] 
-        } 
-      }
-  end
-
-  # GET /beers/1
-  def show
-    render json: @beer, include: { 
-      ingredients: {
-        except: [:beer_id] 
-        } 
-      }
+    render json: @beers, include: :ingredients
   end
 
   # POST /beers
   def create
     @beer = Beer.new(beer_params)
+    @ingredients = @beer.ingredients
     if @beer.save
+      @ingredients.each {|i| i.save }
       render json: {
         status:201,
-        beer: @beer
+        beer: @beer,
+        ingredients: @ingredients
     }, status: :created, location: beers_path(@beer)
     else
       render json: @beer.errors, status: :unprocessable_entity
