@@ -2,9 +2,20 @@ Hello friends! Welcome to Brewer's Friend.
 
 Thank you for taking the time to find us. 
 
-To install, please clone this repo to your machine. Don't forget to bundle! 
+To install, please clone this repo and the frontend repo to your machine and follow the instructions below:
 
-Be sure that you clone the front end of this app, or you will not be able to run it. 
+You can find the back end here: https://github.com/haki9975/brewers_friend_frontend
+
+On the back end, navigate to the backend folder.
+Then, run bundle install to install the dependancies.
+Upon completion of installation, run rails db:migrate to seed the database.
+Once the database is seeded, run rails s to start the rails server. 
+
+On the front end, navigate to the frontend folder. 
+Run explorer.exe index.html if you are running a VM in a Windows environment.
+Run open index.html if you are in a Mac environment.
+
+Be sure that you clone the back end of this app, or you will not be able to run it. 
 You can find the front end here: https://github.com/haki9975/brewers_friend_frontend
 
 Please enjoy, and happy brewing! 
